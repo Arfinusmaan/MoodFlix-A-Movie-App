@@ -7,7 +7,7 @@ const COLLECTION_ID = import.meta.env.VITE_APPWRITE_COLLECTION_ID;
 // console.log('Values : ', PROJECT_ID, DATABASE_ID, COLLECTION_ID);
 
 const client = new Client()
-  .setEndpoint('https://cloud.appwrite.io/v1')
+  .setEndpoint(import.meta.env.VITE_APPWRITE_ENDPOINT_URL)
   .setProject(PROJECT_ID);
 
 const database = new Databases(client);
