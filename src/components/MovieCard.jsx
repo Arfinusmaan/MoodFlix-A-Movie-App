@@ -1,32 +1,40 @@
 import React from 'react'
 
-const MovieCard = ({movie:{title, release_date, vote_average, poster_path, original_language}}) => {
+const MovieCard = ({movie}) => {
+  
+
+  const {Title, Year, imdbRating, Poster, Language} = movie
+
+  // console.log(movie)
+  
   return (
     <div className='movie-card cursor-pointer'>
-      <img src={poster_path? `https://images.tmdb.org/t/p/w500/${poster_path}`
+      <img className="w-[800] h-[400px]"  src={ Poster ? Poster
         : '/no-movie.png'  
-    } alt={title} />
-
+    } alt={Title} />
+      
     <div className='mt-4'>
-            <h3>{title}</h3>
+            <h3 className='font-[palanquin]'>{Title}</h3>
     </div>
 
         <div className='content'>
             <div className='rating'>
                 <img src="star.svg" alt="star icon" />
 
-                <p>{vote_average ? vote_average.toFixed(1)
+                <p>{imdbRating ? imdbRating
                     : 'N/A'    
             }</p>
 
             <span>•</span>
             <p className='lang'>
-                {original_language}
+                {Language ? Language.split('').slice(0,3)
+                :
+                'N/A'}
             </p>
 
             <span>•</span>
             <p>
-                {release_date? release_date.split('-')[0]
+                {Year? Year.split('-')[0]
                 :'N/A'    
             }
             </p>

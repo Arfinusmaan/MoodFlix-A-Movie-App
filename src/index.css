@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Palanquin:wght@400;700&display=swap');
+
+
 @import "tailwindcss";
 
 @theme {
@@ -46,6 +50,8 @@
   header img {
     @apply w-full max-w-lg h-auto object-contain mx-auto drop-shadow-md;
   }
+
+
 }
 
 @layer components {
@@ -140,10 +146,23 @@
       @apply text-gray-100 font-medium text-base;
     }
   }
+  strong{
+    @apply font-[palanquin] text-slate-400 text-lg
+  }
 }
+
+/* table tbody tr{
+  @apply text-xl flex justify-between text-white  leading-relaxed space-x-6 ;
+} */
+
+
 
 @utility text-gradient {
   @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] bg-clip-text text-transparent;
+}
+
+@utility bg-gradient {
+  @apply bg-linear-to-r from-[#D6C7FF] to-[#AB8BFF] ;
 }
 
 @utility fancy-text {
