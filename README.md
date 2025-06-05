@@ -1,63 +1,97 @@
-🎬 Moodflix – React Movie App (OMDB + YouTube)
-A fully responsive and optimized movie app built with React and powered by the OMDB API. Users can search movies in real-time, view detailed info, and watch trailers from YouTube if available.
+# 🎬 Moodflix – Full-Stack React Movie App (Appwrite + OMDB + YouTube)
 
-✨ Features
-🔍 Real-time movie search using optimized debounce technique
+**Moodflix** is a fully responsive full-stack movie application built with **React** and powered by **Appwrite**, **OMDB**, and **YouTube APIs**. It allows users to search for movies in real-time, view detailed information, and watch trailers if available.
 
-🎞️ Detailed movie page with poster, release year, genre, plot, and ratings
+---
 
-📺 YouTube trailer embedding if trailer is available
+## ✨ Features
 
-🚫 Graceful fallback if trailer or movie image is not available
+- 🔎 **Real-time search** with `useDebounce` to avoid unnecessary API calls  
+- 💾 **Appwrite Database** stores trending movies dynamically based on user searches  
+- ☁️ **Appwrite Function** or server handles secure OMDB API requests  
+- 🎥 **Movie detail page** with embedded YouTube trailer (if available)  
+- 📉 Graceful fallback if image or trailer is missing  
+- 📱 Fully **responsive UI** for mobile, tablet, and desktop  
 
-📱 100% mobile responsive across all screen sizes
+---
 
-⚡ Smooth and clean UI interactions
+## ⚙️ Tech Stack
 
-⚙️ Tech Stack
-React (Vite)
+- **Frontend**: React (Vite), Tailwind CSS  
+- **Backend**: Appwrite (Database, Functions)  
+- **APIs**:
+  - OMDB API (via backend)
+  - YouTube Data API v3  
 
-Tailwind CSS
+---
 
-OMDB API for movie data
+## 🔐 API Flow
 
-YouTube iFrame API for trailers
+1. User types a search query.  
+2. Debounced input prevents rapid API calls.  
+3. Query is sent to Appwrite Function/backend, which calls OMDB.  
+4. Response is stored in Appwrite DB and sent back to frontend.  
+5. Trending results update based on frequency of search terms.  
 
-Custom Hooks (e.g., useDebounce) for performance optimization
+---
 
-📦 Installation
-git clone https://github.com/adrianhajdin/react-movies.git
-cd react-movies
+
+---
+
+## 📦 Setup & Installation
+
+1. **Clone the repository**
+
+```bash
+git clone https://github.com/your-username/moodflix.git
+cd moodflix
+
+
+2. **install dependencies**
+
+```bash
 npm install
-Create a .env file in the root with the following:
 
-env
+
+3. Install Tailwind CSS
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+
+
+4. **Create a .env file with the following keys:**
+
 VITE_OMDB_API_KEY=your_omdb_key
 VITE_YOUTUBE_API_KEY=your_youtube_key
-Then start the development server:
+VITE_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+VITE_APPWRITE_PROJECT_ID=your_project_id
+VITE_APPWRITE_DATABASE_ID=your_db_id
+VITE_APPWRITE_COLLECTION_ID=your_collection_id
 
-bash
-Copy
-Edit
+5.**Start the app**
+
+```bash
 npm run dev
-🧠 Project Structure
-graphql
-Copy
-Edit
-src/
-├── components/         # UI components (Navbar, Cards, Loader, etc.)
-├── pages/              # Home, Movie Details
-├── hooks/              # Custom hooks like useDebounce
-├── services/           # API logic for OMDB & YouTube
-├── assets/             # Images and icons
-├── App.jsx             # Main App with Routing
-└── main.jsx            # Entry point
-📚 APIs Used
-OMDB API – for movie data
 
-YouTube Data API v3 – for fetching trailers
 
-🔥 Live Demo
-Check it out here:
-🔗 moodflix-arfin.vercel.app
+
+🌐 Live Demo
+🚀 Visit: https://moodflix-arfin.vercel.app
+
+
+
+📚 APIs & Services Used
+OMDB API – Movie data
+
+YouTube API – Trailers
+
+Appwrite – Backend, DB, and Functions
+
+
+
+📄 License
+This project is open source and available under the MIT License.
+
+
+
 
