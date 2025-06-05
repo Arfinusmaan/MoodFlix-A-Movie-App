@@ -36,18 +36,17 @@
 ---
 
 
----
 
 ## 📦 Setup & Installation
 
-1. **Clone the repository**
+1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/moodflix.git
 cd moodflix
 
 
-2. **install dependencies**
+2. install dependencies
 
 ```bash
 npm install
@@ -59,7 +58,7 @@ npm install
 npm install -D tailwindcss postcss autoprefixer
 
 
-4. **Create a .env file with the following keys:**
+4. Create a .env file with the following keys:
 
 VITE_OMDB_API_KEY=your_omdb_key
 VITE_YOUTUBE_API_KEY=your_youtube_key
@@ -68,12 +67,12 @@ VITE_APPWRITE_PROJECT_ID=your_project_id
 VITE_APPWRITE_DATABASE_ID=your_db_id
 VITE_APPWRITE_COLLECTION_ID=your_collection_id
 
-5.**Start the app**
+5.Start the app
 
 ```bash
 npm run dev
 
-
+---
 
 🌐 Live Demo
 🚀 Visit: https://moodflix-arfin.vercel.app
