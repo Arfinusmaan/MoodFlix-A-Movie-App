@@ -35,6 +35,8 @@
 
 ---
 
+🌐 Live Demo
+🚀 Visit: https://moodflix-arfin.vercel.app
 
 
 ## 📦 Setup & Installation
@@ -74,8 +76,7 @@ npm run dev
 
 ---
 
-🌐 Live Demo
-🚀 Visit: https://moodflix-arfin.vercel.app
+
 
 
 
